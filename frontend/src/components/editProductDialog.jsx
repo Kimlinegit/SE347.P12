@@ -14,9 +14,6 @@ const EditProductDialog = ({ product, onClose }) => {
   const [categories] = state.categoryAPI.categories;
   const updateProduct = state.productAPI.updateProduct;
 
-  // const {productAPI, categoryAPI} = useContext(GlobalState);
-  // const {categories} = categoryAPI;
-  // const {updateProduct} = productAPI;
 
   const [focusedSizeIndex, setFocusedSizeIndex] = useState(null);
 

@@ -11,8 +11,6 @@ const ExistedProductsTable = () => {
   const [products] = state.productAPI.products;
   const deleteProduct = state.productAPI.deleteProduct;
 
-  // const {productAPI} = useContext(GlobalState);
-  // const {products, deleteProduct} = productAPI;
 
   const [isEditDialogOpen, setEditDialogOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);

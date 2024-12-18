@@ -98,13 +98,6 @@ const UserManagement = () => {
       <Dialog open={openEditDialog} onClose={handleCloseEditDialog}>
         <DialogTitle>Cập nhật người dùng</DialogTitle>
         <DialogContent>
-            {/* <TextField
-                label="Role"
-                fullWidth
-                style={{ marginTop: '10px' }}
-                value={editedUser.role}
-                onChange={(e) => setEditedUser({ ...editedUser, role: e.target.value })}
-            /> */}
           <FormControl fullWidth style={{ marginTop: '10px' }} size='small'>
             <InputLabel>Phân quyền</InputLabel>
             <Select

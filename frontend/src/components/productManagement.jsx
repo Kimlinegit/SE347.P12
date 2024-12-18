@@ -1,7 +1,6 @@
 
 import React, { useState} from 'react';
 import {Button, Typography} from '@mui/material';
-// import ExistedProductsTable from './existedProductsTable.jsx';
 import ExistedProductsTable from './existedProductsTable.jsx';
 import AddProductDialog from './addProductDialog.jsx';
 

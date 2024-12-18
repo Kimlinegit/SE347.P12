@@ -17,9 +17,7 @@ const UserOrderHistory = () => {
     orderHistory
   },[]);
   
-  // const {orderAPI} = useContext(GlobalState);
-  // const {orderHistory, userDeleteOrders, cancelOrder} = orderAPI;
-  // console.log(orderHistory);
+
   const [Orders, setOrders] = useState(orderHistory || []);
 
   const handleCancelOrder = (orderId) => {

@@ -48,40 +48,6 @@ const EditprofileDialog = ({ open, onClose }) => {
     }
   };
 
-//   <Dialog open={openEditDialog} onClose={handleCloseEditDialog}>
-//         <DialogTitle>Edit Product</DialogTitle>
-//         <DialogContent>
-//             <TextField
-//                 label="Name"
-//                 fullWidth
-//                 style={{ marginTop: '10px' }}
-//                 value={newProduct.name}
-//                 onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
-//             />
-//             <TextField
-//                 label="Price"
-//                 fullWidth
-//                 style={{ marginTop: '10px' }}
-//                 type="number"
-//                 value={newProduct.price}
-//                 onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
-//             />
-//             <TextField
-//                 label="Category"
-//                 fullWidth
-//                 style={{ marginTop: '10px' }}
-//                 value={newProduct.category}
-//                 onChange={(e) => setNewProduct({ ...newProduct, category: e.target.value })}
-//             />
-//         </DialogContent>
-//         <DialogActions>
-//           <Button onClick={handleCloseEditDialog}>Cancel</Button>
-//           <Button variant="contained" color="primary" onClick={handleEditProduct}>
-//             Save
-//           </Button>
-//         </DialogActions>
-//       </Dialog>
-
   return (
     <Dialog open={open} onClose={onClose}>
       <Paper elevation={3} sx={{ maxWidth: 400, padding: 3, position: 'relative' }}>
@@ -92,7 +58,6 @@ const EditprofileDialog = ({ open, onClose }) => {
           <Grid item>
             <Avatar sx={{ bgcolor: 'primary.main', width: 56, height: 56 }}>
               {avatar ? <img src={avatar} alt="Avatar" style={{ width: '100%', height: '100%', borderRadius: '50%' }} /> : <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} />}
-              {/* <AccountCircleOutlinedIcon sx={{ fontSize: 32 }} /> */}
             </Avatar>
           </Grid>
           <Grid item>

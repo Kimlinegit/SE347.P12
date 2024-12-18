@@ -1,4 +1,4 @@
-// EditQuantity.js
+
 
 import React, { useState, useContext } from 'react';
 import {
@@ -18,8 +18,7 @@ import { GlobalState } from '../globalState.jsx';
 
 const EditQuantityDialog = ({ open, handleClose, productId, productSizes, currentSize, currentQuantity, handleUpdate }) => {
 
-  // const state = useContext(GlobalState);
-  // const {updateCart} = state.cartAPI.updateCart;
+
   const {cartAPI} = useContext(GlobalState);
   const {updateCart} = cartAPI;
 

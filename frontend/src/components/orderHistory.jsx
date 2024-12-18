@@ -7,21 +7,9 @@ const OrderHistory = () => {
   const state = useContext(GlobalState);
   const [orders] = state.orderAPI.orders;
   const [orderHistory] = state.orderAPI.orderHistory;
-  // const { orders, orderHistory } = orderAPI;
   const [loading, setLoading] = useState(true);
 
-//   useEffect(() => {
-//     const fetchOrders = async () => {
-//       try {
-//         await getOrdersByUser(); // Fetch orders for the current user
-//         setLoading(false);
-//       } catch (error) {
-//         console.error('Error fetching orders:', error.message);
-//       }
-//     };
 
-//     fetchOrders();
-//   }, [getOrdersByUser]);
 
   console.log(orderHistory);
 

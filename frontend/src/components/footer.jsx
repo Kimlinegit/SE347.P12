@@ -17,7 +17,7 @@ const styles = {
     backgroundColor: '#fff',
     padding: '10px 20px',
     borderTop: '1px solid #ccc',
-    marginTop: 'auto', // Push the footer to the bottom
+    marginTop: 'auto',
   },
   container: {
     maxWidth: '1200px',

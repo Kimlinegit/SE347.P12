@@ -26,9 +26,6 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
   const [categories] = state.categoryAPI.categories;
   const createProduct = state.productAPI.createProduct;
 
-  // const {productAPI, categoryAPI} = useContext(GlobalState);
-  // const {categories} = categoryAPI;
-  // const {createProduct} = productAPI;
 
   const [focusedSizeIndex, setFocusedSizeIndex] = useState(null);
 
@@ -86,15 +83,6 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
     // Create a new size with default values
     const newSize = { size: '', quantity: '' };
 
-    // if (newSize.size.trim() === '' || newSize.quantity.trim() === '') {
-    //   // Hiển thị thông báo lỗi hoặc thực hiện hành động phù hợp với yêu cầu của bạn
-    //   alert('Please enter both size and quantity.');
-    //   return;
-    // }
-    // if (isNaN(newSize.quantity) || newSize.quantity.trim() === '') {
-    //   alert('Please enter a valid quantity.');
-    //   return;
-    // }
     if(sizesAddNewProduct) {
       setSizesAddNewProduct([...sizesAddNewProduct, newSize])
       // update sizes in `newProduct`
@@ -108,17 +96,8 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
     const updatedSizes = sizesAddNewProduct.map((size, index) =>
       index === sizeIndex ? { ...size, [field]: value } : size
     );
-    // if (updatedSizes[sizeIndex].size.trim() === '' || updatedSizes[sizeIndex].quantity.trim() === '') {
-    //   // Hiển thị thông báo lỗi hoặc thực hiện hành động phù hợp với yêu cầu của bạn
-    //   alert('Please enter both size and quantity.');
-    //   return;
-    // }
-    // if (isNaN(updatedSizes[sizeIndex].quantity) || updatedSizes[sizeIndex].quantity.trim() === '') {
-    //   alert('Please enter a valid quantity.');
-    //   return;
-    // }
+
     setSizesAddNewProduct(updatedSizes);
-    // update sizes in `newProduct`
     setNewProduct((prevProduct) => ({ ...prevProduct, sizes: updatedSizes }));
   };
 

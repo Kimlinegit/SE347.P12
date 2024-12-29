@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import ImageSchema from "./imageSchema.js";
 
 const UserSchema = new mongoose.Schema({
     userName: {

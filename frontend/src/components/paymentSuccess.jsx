@@ -19,7 +19,7 @@ const PaymentSuccess = () => {
     if (orderData) {
       try {
         await createOrder(orderData);
-        localStorage.removeItem("orderData"); // Xóa dữ liệu sau khi xử lý xong
+        localStorage.removeItem("orderData");
       } catch (error) {
         console.error("Error creating order:", error);
         alert("Đặt hàng thất bại. Vui lòng thử lại!");
@@ -37,7 +37,7 @@ const PaymentSuccess = () => {
   };
 
   useEffect(() => {
-    
+    // Automatically show the dialog when the component is loaded
     setOpenDialog(true);
   }, []);
 
@@ -45,9 +45,9 @@ const PaymentSuccess = () => {
     <Container maxWidth="md">
       <Dialog 
         open={openDialog} 
-        onClose={() => {}} // Giữ nguyên onClose không làm gì khi bấm ngoài
-        disableBackdropClick  // Disable closing by clicking outside the dialog
-        disableEscapeKeyDown  // Disable closing by pressing ESC
+        onClose={() => {}}
+        disableBackdropClick
+        disableEscapeKeyDown
       >
         <DialogTitle>Thanh toán thành công!</DialogTitle>
         <DialogContent>

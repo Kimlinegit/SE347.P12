@@ -77,7 +77,6 @@ const OrderManagement = () => {
             {Orders.map((order) => (
               <TableRow key={order._id}>
                 <TableCell>
-                  {/* Sử dụng Link để chuyển hướng */}
                   <Link to={`/order/${order._id}`}>
                     {order._id}
                   </Link>

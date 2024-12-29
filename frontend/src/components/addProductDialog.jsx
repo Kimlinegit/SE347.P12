@@ -26,7 +26,6 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
   const [categories] = state.categoryAPI.categories;
   const createProduct = state.productAPI.createProduct;
 
-
   const [focusedSizeIndex, setFocusedSizeIndex] = useState(null);
 
   const scrollRef = useRef(null);
@@ -80,15 +79,11 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
   }
 
   const handleAddSizeNewProduct = () => {
-    // Create a new size with default values
     const newSize = { size: '', quantity: '' };
-
     if(sizesAddNewProduct) {
       setSizesAddNewProduct([...sizesAddNewProduct, newSize])
-      // update sizes in `newProduct`
       setNewProduct((prevProduct) => ({ ...prevProduct, sizes: [...prevProduct.sizes, newSize] }));
     }
-    // Set the focused index to the newly added size
     setFocusedSizeIndex(sizesAddNewProduct.length);
   }
 
@@ -115,7 +110,6 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
   console.log(newProduct);
 
   const handleAddProduct = async () => {
-    // Perform add product action
     await createProduct(newProduct);
     onClose();
   };
@@ -125,7 +119,6 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
   }
 
   useEffect(() => {
-    // Scroll to the last child when the component updates
     if (scrollRef.current && scrollRef.current.lastChild) {
       scrollRef.current.lastChild.scrollIntoView({ behavior: 'smooth' });
     }
@@ -133,10 +126,8 @@ const AddProductDialog = ({ isAddDialogOpen, onClose }) => {
 
 
   useEffect(() => {
-    // Focus vào ô văn bản chỉ khi index đã được cập nhật
     if (focusedSizeIndex !== null && sizeInputRefs.current.length > 0) {
       sizeInputRefs.current[focusedSizeIndex].focus();
-      // Đặt lại index để tránh việc focus lại khi component được render lại
       setFocusedSizeIndex(null);
     }
   }, [sizesAddNewProduct, focusedSizeIndex]);

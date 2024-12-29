@@ -99,7 +99,6 @@ function LoginDialog({  open, onClose }) {
                 }}
               />
               <TextField
-                // label="Password"
                 label="Mật khẩu"
                 type="password"
                 name='password'

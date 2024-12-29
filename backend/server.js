@@ -39,13 +39,13 @@ app.use(fileUpload({
     useTempFiles: true
 }));
 
-// app.use("/api/image", UploadRouter);
-// app.use("/api/user", UserRouter);
-// app.use("/api/categories", categoryRouter);
-// app.use("/api/products", ProductRouter);
-// app.use("/api/cart", CartRouter);
-// app.use("/api/order", OrderRouter);
-// app.use("/api/statistic", StatisticRouter);
+app.use("/api/image", UploadRouter);
+app.use("/api/user", UserRouter);
+app.use("/api/categories", categoryRouter);
+app.use("/api/products", ProductRouter);
+app.use("/api/cart", CartRouter);
+app.use("/api/order", OrderRouter);
+app.use("/api/statistic", StatisticRouter);
 
 
 

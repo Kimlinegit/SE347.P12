@@ -1,4 +1,4 @@
-// OrderHistory.js
+
 import React, { useState, useEffect, useContext } from 'react';
 import { Typography, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper } from '@mui/material';
 import { GlobalState } from '../globalState'; // Import global state context
@@ -9,9 +9,6 @@ const OrderHistory = () => {
   const [orderHistory] = state.orderAPI.orderHistory;
   const [loading, setLoading] = useState(true);
 
-
-
-  console.log(orderHistory);
 
   if (loading) {
     return <Typography>Loading...</Typography>;

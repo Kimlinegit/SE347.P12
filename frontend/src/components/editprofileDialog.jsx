@@ -16,30 +16,23 @@ const EditprofileDialog = ({ open, onClose }) => {
   const [loading, setLoading] = useState(false);
 
   const handleSave = async () => {
-    // Check if passwords match
     if (password !== confirmPass) {
       alert("Passwords do not match");
       return;
     }
-
-    // Simulate signup process with loading state
     setLoading(true);
     try {
-      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log('Signup with:', { userName, email, password, avatar });
     } finally {
       setLoading(false);
-      // Close the dialog after signup
       onClose();
     }
   };
 
   const handleAvatarChange = (e) => {
-    // Handle avatar file input change
     const file = e.target.files[0];
     if (file) {
-      // Convert the image file to base64 format
       const reader = new FileReader();
       reader.onloadend = () => {
         setAvatar(reader.result);

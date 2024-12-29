@@ -3,6 +3,7 @@ import { Typography, Button, Dialog, DialogTitle, DialogContent, DialogActions, 
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { GlobalState } from '../globalState';
+import { Container } from '@material-ui/core';
 
 
 const UserManagement = () => {

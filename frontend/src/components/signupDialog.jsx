@@ -97,13 +97,11 @@ const SignupDialog = ({ open, onClose }) => {
           <Grid2 item="true">
             <DialogTitle>
               Đăng ký
-              {/* <Typography variant="h5">Đăng ký</Typography> */}
             </DialogTitle>
           </Grid2>
           <Grid2 item="true">
             <DialogContent>
               <TextField
-                // label="Username"
                 label="Tên người dùng"
                 variant="outlined"
                 fullWidth
@@ -137,7 +135,6 @@ const SignupDialog = ({ open, onClose }) => {
                 }}
               />
               <TextField
-                // label="Password"
                 label="Mật khẩu"
                 type="password"
                 variant="outlined"
@@ -155,7 +152,6 @@ const SignupDialog = ({ open, onClose }) => {
                 }}
               />
               <TextField
-                // label="Confirm Password"
                 label="Xác nhận mật khẩu"
                 type="password"
                 variant="outlined"
@@ -173,7 +169,6 @@ const SignupDialog = ({ open, onClose }) => {
                 }}
               />
               <TextField
-                // label="Phone Contact"
                 label="Số điện thoại"
                 variant="outlined"
                 fullWidth
@@ -205,7 +200,6 @@ const SignupDialog = ({ open, onClose }) => {
                   startIcon={<PhotoCameraOutlinedIcon />}
                   sx={{ marginTop: 2 }}
                 >
-                  {/* Upload Avatar */}
                   Chọn ảnh đại diện
                 </Button>
               </label>
@@ -221,10 +215,8 @@ const SignupDialog = ({ open, onClose }) => {
                 {loading ? <CircularProgress size={24} color="inherit" /> : 'Đăng ký'}
               </Button>
               <Typography variant="body2" sx={{ marginTop: 2 }}>
-                {/* Already have an account?{' '} */}
                 Bạn đã có tài khoản?{' '}
                 <Link href="#" color="inherit" onClick={onClose}>
-                  {/* Login */}
                   Đăng nhập
                 </Link>
               </Typography>

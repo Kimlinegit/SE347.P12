@@ -33,10 +33,8 @@ const EditProductDialog = ({ product, onClose }) => {
         const reader = new FileReader();
         reader.onloadend = async () => {
           if (file && file.type.startsWith('image/')) {
-            // Tìm vị trí của phần tử trong mảng imagesReview
             const imageIndex = imagesReview.findIndex((image, i) => i === index);
   
-            // Nếu phần tử tồn tại, cập nhật nó với reader.result
             if (imageIndex !== -1) {
               setImagesReview((prevImages) => {
                 const updatedImages = [...prevImages];
@@ -125,7 +123,6 @@ const EditProductDialog = ({ product, onClose }) => {
   };
 
   const handleEditProduct = async () => {
-    // Perform edit product action for the product with productId
     await updateProduct(editedProduct, product._id);
     onClose();
   };
@@ -145,7 +142,6 @@ const EditProductDialog = ({ product, onClose }) => {
   };
 
   useEffect(() => {
-    // Scroll to the last child when the component updates
     if (scrollRef.current && scrollRef.current.lastChild) {
       scrollRef.current.lastChild.scrollIntoView({ behavior: 'smooth' });
     }
@@ -153,10 +149,8 @@ const EditProductDialog = ({ product, onClose }) => {
 
 
   useEffect(() => {
-    // Focus vào ô văn bản chỉ khi index đã được cập nhật
     if (focusedSizeIndex !== null && sizeInputRefs.current.length > 0) {
       sizeInputRefs.current[focusedSizeIndex].focus();
-      // Đặt lại index để tránh việc focus lại khi component được render lại
       setFocusedSizeIndex(null);
     }
   }, [sizesEditedProduct, focusedSizeIndex]);

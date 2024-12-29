@@ -1,3 +1,4 @@
+
 import React, {useState, useEffect, useContext} from 'react';
 import { Elements } from '@stripe/react-stripe-js';
 import Pages from './pages/page.jsx';
@@ -22,3 +23,12 @@ const App = () => {
 }
 
 export default App
+
+
+
+
+
+
+
+
+

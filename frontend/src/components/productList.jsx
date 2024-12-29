@@ -6,7 +6,7 @@ import Filter from './filter.jsx';
 
 const ProductList = ({ products }) => {
   return (
-    <Container sx={{ mt: 4, mb: 6 }}>
+    <Container>
       <Typography variant="h4" component="h1" gutterBottom align="center" sx={{ fontWeight: 'bold', color: '#333' }}>
         Danh sách sản phẩm
       </Typography>

@@ -4,6 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import CancelIcon from '@mui/icons-material/Cancel';
 import { GlobalState } from '../globalState';
+import { Link } from 'react-router-dom';
 import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 
 
@@ -17,7 +18,6 @@ const UserOrderHistory = () => {
     orderHistory
   },[]);
   
-
   const [Orders, setOrders] = useState(orderHistory || []);
 
   const handleCancelOrder = (orderId) => {
@@ -42,7 +42,7 @@ const UserOrderHistory = () => {
       <TableContainer component={Paper} style={{ marginTop: '20px', height: '52vh', overflowY: 'auto' }}>
         <Table stickyHeader>
           <TableHead>
-            <TableRow>
+            <TableRow>  
               <TableCell>ID</TableCell>
               {/* <TableCell>User</TableCell> */}
               <TableCell>Phương thức thanh toán</TableCell>
@@ -55,7 +55,11 @@ const UserOrderHistory = () => {
             {Orders.map((order) => (
               <TableRow key={order._id}>
                 <TableCell>{order._id}</TableCell>
-                {/* <TableCell>{order.user.userName}</TableCell> */}
+                {/* <TableCell>
+                  <Link to={`/order/${order._id}`}>
+                    {order._id}
+                  </Link>
+                </TableCell> */}
                 <TableCell>{order.paymentMethod}</TableCell>
                 <TableCell>{order.totalPrice}</TableCell>
                 <TableCell>{order.status}</TableCell>

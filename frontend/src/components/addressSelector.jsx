@@ -11,7 +11,8 @@ import {
   Menu
 } from '@mui/material';
 
-import { cities, districtsMap, wardsMap } from '../data/addressData.js';
+
+import { cities, districtsMap, wardsMap } from '../data/addressData.jsx';
 
 
 const AddressSelector = ({userAddress, onAddressChange }) => {

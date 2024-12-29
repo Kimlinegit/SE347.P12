@@ -374,9 +374,9 @@ const ProductDetail = () => {
 
   const productDetailWithSimilar = new SimilarProductDecorator(concreteProductDetail, similarProducts);
   return (
-    <div>
+    <>
       {productDetailWithSimilar.render(product)}
-    </div>
+    </>
   )
 }
 

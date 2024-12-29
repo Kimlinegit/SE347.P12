@@ -85,7 +85,7 @@ const Profile = () => {
   };
 
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" style={{padding: 30, marginTop: 50}}>
       <Paper elevation={3} sx={{ padding: 4, borderRadius: 3, marginTop: 4 }}>
         <Grid2 container spacing={3}>
           <Grid2 item="true" xs={12} md={4} sx={{ textAlign: 'center' }}>

@@ -1,5 +1,4 @@
 
-
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
@@ -43,7 +42,6 @@ function CartAPI() {
     }
   };
 
-    // Update cart items and count when there are changes in the cart
     const updateCartItems = (newCartItems) => {
       setCartItems(newCartItems);
       setCountCartItems(newCartItems.length);

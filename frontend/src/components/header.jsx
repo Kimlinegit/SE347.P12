@@ -58,11 +58,11 @@ const Header = ({ users, fixed }) => {
   };
 
   const handleLoginSuccess = (user) => {
-    setLoginDialogOpen(false); // Đóng dialog sau khi đăng nhập
+    setLoginDialogOpen(false);
   };
 
   return (
-    <AppBar position={fixed ? 'fixed' : 'static'} color="primary">
+    <AppBar position={fixed ? 'fixed' : 'static'} color="primary" height='20vh'>
       <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="h6" component={Link} to="/" style={{ textDecoration: 'none', color: 'white' }}>
           Football Store
@@ -141,7 +141,7 @@ const Header = ({ users, fixed }) => {
             users={users} 
             open={loginDialogOpen} 
             onClose={handleLoginDialogClose} 
-            onLoginSuccess={handleLoginSuccess} // Truyền callback vào LoginDialog
+            onLoginSuccess={handleLoginSuccess}
           />
         )}
       </Toolbar>

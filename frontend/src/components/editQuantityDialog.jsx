@@ -1,5 +1,4 @@
 
-
 import React, { useState, useContext } from 'react';
 import {
   Dialog,
@@ -17,7 +16,6 @@ import {
 import { GlobalState } from '../globalState.jsx';
 
 const EditQuantityDialog = ({ open, handleClose, productId, productSizes, currentSize, currentQuantity, handleUpdate }) => {
-
 
   const {cartAPI} = useContext(GlobalState);
   const {updateCart} = cartAPI;

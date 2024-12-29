@@ -89,8 +89,6 @@ const detailProduct = async (req, res) => {
         const product = await Product.findById(productId);
 
         if (!product) {
-            // Nếu sản phẩm không tồn tại, trả về mã trạng thái 404
-            // return res.status(404).json({ message: "Product not found" });
             return res.status(404).json({ message: "Không tìm thấy sản phẩm!" });
         }
 
@@ -98,7 +96,7 @@ const detailProduct = async (req, res) => {
 
         res.json(product);
     } catch (error) {
-        console.error(error); // Log lỗi để dễ theo dõi
+        console.error(error);
         res.status(500).json({ message: error.message });
     }
 };

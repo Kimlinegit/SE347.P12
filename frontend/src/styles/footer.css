@@ -8,11 +8,13 @@
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .footer-text {
     font-size: 15px;
     text-align: center;
     color: #ffff;
+    align-items: center;
 }
 
